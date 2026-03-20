@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+
+    <br><br>
+
+        <p id="resultado"></p>
+
+        <script>
+            function calcular(operacao) {
+                let n1 = Number(document.getElementById("num1").value)
+                let n2 = Number(document.getElementById("num2").value)
+
+                let resultado
+
+                if (operacao === "+") {
+                    resultado = n1 + n2
+                } else if (operacao === "-") {
+                    resultado = n1 - n2
+                } else if (operacao === "*") {
+                    resultado = n1 * n2
+                } else if (operacao === "/") {
+                    resultado = n1 / n2
+                }
+                 document.getElementById("resultado").innerText = resultado
+            }
+        </script>
+       <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button> 
+        
+        
+</body>
+</html>
